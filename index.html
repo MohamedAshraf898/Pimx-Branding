@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pimx Branding — Your brand, precisely made.</title>
+  <meta name="description"
+    content="Pimx Branding is a branding studio creating identities built around each business — its people, its audience and its ambition.">
+  <meta name="theme-color" content="#F4F1EC">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <script>
+    // Runs before paint: language, direction and motion flags, so nothing jumps after load.
+    (function () {
+      var d = document.documentElement, lang = 'en';
+      try {
+        var q = new URLSearchParams(location.search).get('lang');
+        lang = q === 'ar' || q === 'en' ? q : (localStorage.getItem('pimx-lang') || 'en');
+      } catch (e) { }
+      if (lang === 'ar') { d.lang = 'ar'; d.dir = 'rtl'; d.classList.add('is-loading'); }
+      d.classList.remove('no-js');
+      d.classList.add('js');
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('motion');
+      // Safety net: never leave content hidden if scripts fail to load.
+      setTimeout(function () { if (!window.__pimxReady) d.classList.remove('motion', 'is-loading'); }, 4000);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Montserrat (UI/body) · Archivo Expanded (fallback for Cy Grotesk Wide) · Alexandria (fallback for Sultan Mezajeey) -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;800&family=Archivo:wdth,wght@125,700;125,800&family=Montserrat:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="site-header">
+    <div class="site-header__inner wrap">
+      <a class="logo" href="#top" aria-label="Pimx Branding — home" data-nav-item>
+        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="26" />
+          <path class="logo__bowl" d="M12 3a8 8 0 0 1 0 16Z" />
+        </svg>
+        <span class="logo__word">Pimx</span>
+        <span class="logo__sub">Branding</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li data-nav-item><a class="nav__link" href="#work" data-i18n="nav.work">Work</a></li>
+          <li data-nav-item><a class="nav__link" href="#about" data-i18n="nav.about">About</a></li>
+          <li data-nav-item><a class="nav__link" href="#services" data-i18n="nav.services">Services</a></li>
+          <li data-nav-item><a class="nav__link" href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <button class="lang-toggle" type="button" data-lang-toggle data-nav-item data-i18n-attr="aria-label:lang.aria"
+          aria-label="Switch to Arabic">
+          <span data-i18n="lang.switch" lang="ar">عربي</span>
+        </button>
+        <a class="btn btn--small site-header__cta" href="#contact" data-nav-item data-cursor="cta">
+          <span class="btn__label" data-i18n="cta.start">Start a project</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-nav-item>
+          <span class="menu-toggle__label" data-i18n="nav.menu">Menu</span>
+          <span class="menu-toggle__lines" aria-hidden="true"><i></i><i></i></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="mobile-menu__inner wrap" aria-label="Mobile">
+      <ul class="mobile-menu__list">
+        <li><a href="#work"><span class="t-index">01</span><span data-i18n="nav.work">Work</span></a></li>
+        <li><a href="#about"><span class="t-index">02</span><span data-i18n="nav.about">About</span></a></li>
+        <li><a href="#services"><span class="t-index">03</span><span data-i18n="nav.services">Services</span></a></li>
+        <li><a href="#contact"><span class="t-index">04</span><span data-i18n="nav.contact">Contact</span></a></li>
+      </ul>
+      <div class="mobile-menu__foot">
+        <a class="btn" href="#contact"><span class="btn__label" data-i18n="cta.start">Start a project</span></a>
+        <button class="lang-toggle lang-toggle--lg" type="button" data-lang-toggle data-i18n-attr="aria-label:lang.aria"
+          aria-label="Switch to Arabic">
+          <span data-i18n="lang.switch" lang="ar">عربي</span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ============ 01 HERO ============ -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__inner wrap">
+        <div class="hero__meta">
+          <p class="t-label" data-hero-fade data-i18n="hero.label">Branding Studio</p>
+          <p class="t-label hero__meta-mid" data-hero-fade data-i18n="hero.disciplines">Strategy — Identity — Digital
+          </p>
+          <p class="t-label hero__caption" data-hero-fade><span data-i18n="hero.fig">Fig. 01 — Built to
+              fit</span><span>4 × 4</span></p>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="fit-comp">
+            <span class="fit-comp__grid"></span>
+            <span class="fit-comp__blk fit-comp__blk--bar"></span>
+            <span class="fit-comp__blk fit-comp__blk--bowl"></span>
+            <span class="fit-comp__blk fit-comp__blk--dot"></span>
+            <span class="fit-comp__blk fit-comp__blk--quarter"></span>
+            <span class="fit-comp__blk fit-comp__blk--square"></span>
+            <span class="crop crop--tl"></span><span class="crop crop--tr"></span>
+            <span class="crop crop--bl"></span><span class="crop crop--br"></span>
+          </div>
+        </div>
+
+        <h1 class="hero__title display" id="hero-title">
+          <span class="line"><span class="line__inner" data-i18n="hero.l1">Your brand,</span></span>
+          <span class="line line--indent"><span class="line__inner" data-i18n="hero.l2">precisely</span></span>
+          <span class="line"><span class="line__inner"><span data-i18n="hero.l3">made</span><span
+                class="accent">.</span></span></span>
+        </h1>
+
+        <div class="hero__foot">
+          <p class="hero__lede" data-hero-fade data-i18n="hero.lede">We build identities around one business at a time —
+            its people, its audience, its ambition. Nothing borrowed. Nothing off the shelf.</p>
+          <a class="btn btn--solid hero__cta" href="#contact" data-magnetic data-cursor="cta">
+            <span class="btn__label" data-i18n="cta.start">Start a project</span>
+            <span class="btn__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="hero__scroll t-label" href="#clients" data-hero-fade>
+            <span data-i18n="hero.scroll">Scroll</span>
+            <span class="hero__scroll-line" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 CLIENTS ============ -->
+    <!-- Replace assets/logos/client-0X.svg with real client logos and update alt text. -->
+    <section class="clients section" id="clients" aria-labelledby="clients-title">
+      <div class="wrap">
+        <header class="section-head">
+          <span class="t-index" data-reveal="fade">(01)</span>
+          <h2 class="section-head__title display display--md" id="clients-title" data-reveal="lines">
+            <span class="line"><span class="line__inner" data-i18n="clients.title">Brands we’ve worked
+                with</span></span>
+          </h2>
+          <p class="section-head__note" data-reveal="fade" data-i18n="clients.note">A curated collection of the
+            businesses we’ve shaped identities for.</p>
+        </header>
+
+        <ul class="clients__grid" role="list">
+          <li class="client"><span class="client__num">01</span><img src="assets/logos/client-01.svg"
+              alt="Client 01 logo (placeholder)" width="260" height="80" loading="lazy" decoding="async"></li>
+          <li class="client"><span class="client__num">02</span><img src="assets/logos/client-02.svg"
+              alt="Client 02 logo (placeholder)" width="260" height="80" loading="lazy" decoding="async"></li>
+          <li class="client"><span class="client__num">03</span><img src="assets/logos/client-03.svg"
+              alt="Client 03 logo (placeholder)" width="260" height="80" loading="lazy" decoding="async"></li>
+          <li class="client"><span class="client__num">04</span><img src="assets/logos/client-04.svg"
+              alt="Client 04 logo (placeholder)" width="260" height="80" loading="lazy" decoding="async"></li>
+          <li class="client"><span class="client__num">05</span><img src="assets/logos/client-05.svg"
+              alt="Client 05 logo (placeholder)" width="260" height="80" loading="lazy" decoding="async"></li>
+          <li class="client"><span class="client__num">06</span><img src="assets/logos/client-06.svg"
+              alt="Client 06 logo (placeholder)" width="260" height="80" loading="lazy" decoding="async"></li>
+          <li class="client"><span class="client__num">07</span><img src="assets/logos/client-07.svg"
+              alt="Client 07 logo (placeholder)" width="260" height="80" loading="lazy" decoding="async"></li>
+          <li class="client"><span class="client__num">08</span><img src="assets/logos/client-08.svg"
+              alt="Client 08 logo (placeholder)" width="260" height="80" loading="lazy" decoding="async"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 03 ABOUT ============ -->
+    <section class="about section" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="about__grid">
+          <div class="about__main">
+            <p class="t-index" data-reveal="fade"><span>(02)</span> <span data-i18n="about.label">About</span></p>
+            <h2 class="about__statement display display--lg" id="about-title" data-reveal="lines">
+              <span class="line"><span class="line__inner" data-i18n="about.l1">Every brand</span></span>
+              <span class="line"><span class="line__inner" data-i18n="about.l2">has its own</span></span>
+              <span class="line"><span class="line__inner"><span data-i18n="about.l3">shape</span><span
+                    class="accent">.</span></span></span>
+            </h2>
+          </div>
+
+          <div class="about__aside">
+            <p class="about__lead" data-reveal="fade" data-i18n="about.p1">Pimx Branding creates identities around the
+              specifics of each client — the business, the audience, the personality and the ambition behind it. We
+              start with what makes you different, then build a system that holds its shape everywhere it goes.</p>
+            <p class="about__text" data-reveal="fade" data-i18n="about.p2">No templates. No borrowed ideas. Just a brand
+              that feels like it was always yours.</p>
+
+            <dl class="about__details" data-reveal="fade">
+              <div>
+                <dt class="t-label" data-i18n="about.studio">Studio</dt>
+                <dd>Pimx Branding</dd>
+              </div>
+              <div>
+                <dt class="t-label" data-i18n="about.focus">Focus</dt>
+                <dd>
+                  <span data-i18n="svc.1.t">Brand Strategy</span><br>
+                  <span data-i18n="svc.2.t">Visual Identity</span><br>
+                  <span data-i18n="svc.4.t">Digital Experience</span>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <!-- The "fit" moment: modules drift in slightly misaligned, then settle into a precise grid. -->
+        <figure class="fit-grid" aria-hidden="true">
+          <div class="fit-grid__cells">
+            <span class="cell"><i class="sh sh--sq"></i></span><span class="cell"><i class="sh sh--q"></i></span><span
+              class="cell"><i class="sh sh--ci sh--wine"></i></span><span class="cell"><i class="sh sh--bar"></i></span>
+            <span class="cell"><i class="sh sh--hc"></i></span><span class="cell"><i
+                class="sh sh--ring"></i></span><span class="cell"><i class="sh sh--sq sh--wine"></i></span><span
+              class="cell"><i class="sh sh--q sh--r"></i></span>
+            <span class="cell"><i class="sh sh--ci"></i></span><span class="cell"><i
+                class="sh sh--bar sh--v"></i></span><span class="cell"><i class="sh sh--hc sh--wine"></i></span><span
+              class="cell"><i class="sh sh--sq"></i></span>
+            <span class="cell"><i class="sh sh--ring"></i></span><span class="cell"><i
+                class="sh sh--q sh--wine"></i></span><span class="cell"><i class="sh sh--bar"></i></span><span
+              class="cell"><i class="sh sh--ci"></i></span>
+            <span class="cell"><i class="sh sh--sq sh--wine"></i></span><span class="cell"><i
+                class="sh sh--hc sh--r"></i></span><span class="cell"><i class="sh sh--ci"></i></span><span
+              class="cell"><i class="sh sh--ring"></i></span>
+            <span class="cell"><i class="sh sh--q"></i></span><span class="cell"><i class="sh sh--sq"></i></span><span
+              class="cell"><i class="sh sh--bar sh--v sh--wine"></i></span><span class="cell"><i
+                class="sh sh--hc"></i></span>
+          </div>
+          <figcaption class="t-label fit-grid__caption">
+            <span data-i18n="about.fig">Fig. 02 — Every part, in its place</span>
+            <span>24 / 24</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ 04 PROJECTS ============ -->
+    <!-- Replace names/categories/years and assets/img/project-0X-{a,b} with real work.
+         For photography use srcset, e.g. srcset="img-800.webp 800w, img-1600.webp 1600w" sizes="(min-width: 1100px) 31vw, (min-width: 700px) 46vw, 92vw" -->
+    <section class="projects section" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <header class="section-head section-head--split">
+          <span class="t-index" data-reveal="fade">(03)</span>
+          <h2 class="section-head__title display display--xl" id="work-title" data-reveal="lines">
+            <span class="line"><span class="line__inner" data-i18n="work.title">Selected Work</span></span>
+          </h2>
+          <p class="section-head__count display" data-reveal="fade">06</p>
+        </header>
+
+        <ul class="projects__grid" role="list">
+          <li class="project">
+            <a class="project__link" href="#" data-cursor="view">
+              <div class="project__media">
+                <img class="project__img" src="assets/img/project-01-a.svg"
+                  alt="Project 01 — primary image (placeholder)" width="1200" height="1500" loading="lazy"
+                  decoding="async">
+                <img class="project__img project__img--alt" src="assets/img/project-01-b.svg" alt="" width="1200"
+                  height="1500" loading="lazy" decoding="async">
+              </div>
+              <div class="project__info">
+                <span class="project__num">01</span>
+                <h3 class="project__title display" data-i18n="work.p1">Project 01</h3>
+                <span class="project__year">2026</span>
+                <span class="project__cat" data-i18n="work.c1">Brand Identity / Digital</span>
+              </div>
+            </a>
+          </li>
+          <li class="project">
+            <a class="project__link" href="#" data-cursor="view">
+              <div class="project__media">
+                <img class="project__img" src="assets/img/project-02-a.svg"
+                  alt="Project 02 — primary image (placeholder)" width="1200" height="1500" loading="lazy"
+                  decoding="async">
+                <img class="project__img project__img--alt" src="assets/img/project-02-b.svg" alt="" width="1200"
+                  height="1500" loading="lazy" decoding="async">
+              </div>
+              <div class="project__info">
+                <span class="project__num">02</span>
+                <h3 class="project__title display" data-i18n="work.p2">Project 02</h3>
+                <span class="project__year">2026</span>
+                <span class="project__cat" data-i18n="work.c2">Strategy / Visual Identity</span>
+              </div>
+            </a>
+          </li>
+          <li class="project">
+            <a class="project__link" href="#" data-cursor="view">
+              <div class="project__media">
+                <img class="project__img" src="assets/img/project-03-a.svg"
+                  alt="Project 03 — primary image (placeholder)" width="1200" height="1500" loading="lazy"
+                  decoding="async">
+                <img class="project__img project__img--alt" src="assets/img/project-03-b.svg" alt="" width="1200"
+                  height="1500" loading="lazy" decoding="async">
+              </div>
+              <div class="project__info">
+                <span class="project__num">03</span>
+                <h3 class="project__title display" data-i18n="work.p3">Project 03</h3>
+                <span class="project__year">2025</span>
+                <span class="project__cat" data-i18n="work.c3">Art Direction</span>
+              </div>
+            </a>
+          </li>
+          <li class="project">
+            <a class="project__link" href="#" data-cursor="view">
+              <div class="project__media">
+                <img class="project__img" src="assets/img/project-04-a.svg"
+                  alt="Project 04 — primary image (placeholder)" width="1200" height="1500" loading="lazy"
+                  decoding="async">
+                <img class="project__img project__img--alt" src="assets/img/project-04-b.svg" alt="" width="1200"
+                  height="1500" loading="lazy" decoding="async">
+              </div>
+              <div class="project__info">
+                <span class="project__num">04</span>
+                <h3 class="project__title display" data-i18n="work.p4">Project 04</h3>
+                <span class="project__year">2025</span>
+                <span class="project__cat" data-i18n="work.c4">Packaging / Identity</span>
+              </div>
+            </a>
+          </li>
+          <li class="project">
+            <a class="project__link" href="#" data-cursor="view">
+              <div class="project__media">
+                <img class="project__img" src="assets/img/project-05-a.svg"
+                  alt="Project 05 — primary image (placeholder)" width="1200" height="1500" loading="lazy"
+                  decoding="async">
+                <img class="project__img project__img--alt" src="assets/img/project-05-b.svg" alt="" width="1200"
+                  height="1500" loading="lazy" decoding="async">
+              </div>
+              <div class="project__info">
+                <span class="project__num">05</span>
+                <h3 class="project__title display" data-i18n="work.p5">Project 05</h3>
+                <span class="project__year">2025</span>
+                <span class="project__cat" data-i18n="work.c5">Brand Guidelines</span>
+              </div>
+            </a>
+          </li>
+          <li class="project">
+            <a class="project__link" href="#" data-cursor="view">
+              <div class="project__media">
+                <img class="project__img" src="assets/img/project-06-a.svg"
+                  alt="Project 06 — primary image (placeholder)" width="1200" height="1500" loading="lazy"
+                  decoding="async">
+                <img class="project__img project__img--alt" src="assets/img/project-06-b.svg" alt="" width="1200"
+                  height="1500" loading="lazy" decoding="async">
+              </div>
+              <div class="project__info">
+                <span class="project__num">06</span>
+                <h3 class="project__title display" data-i18n="work.p6">Project 06</h3>
+                <span class="project__year">2024</span>
+                <span class="project__cat" data-i18n="work.c6">Digital Experience</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 05 SERVICES ============ -->
+    <section class="services section" id="services" data-theme="dark" aria-labelledby="services-title">
+      <div class="wrap">
+        <header class="section-head section-head--split">
+          <span class="t-index" data-reveal="fade">(04)</span>
+          <h2 class="section-head__title display display--xl" id="services-title" data-reveal="lines">
+            <span class="line"><span class="line__inner" data-i18n="svc.title">Services</span></span>
+          </h2>
+          <p class="section-head__note" data-reveal="fade" data-i18n="svc.intro">Six disciplines. One system — shaped
+            around you.</p>
+        </header>
+
+        <ol class="svc-list" role="list">
+          <li class="svc" data-preview="assets/img/project-02-a.svg">
+            <h3 class="svc__heading">
+              <button class="svc__head" type="button" aria-expanded="false" aria-controls="svc-body-1" id="svc-btn-1">
+                <span class="svc__num">01</span>
+                <span class="svc__title display" data-i18n="svc.1.t">Brand Strategy</span>
+                <span class="svc__icon" aria-hidden="true"><i></i><i></i></span>
+              </button>
+            </h3>
+            <div class="svc__body" id="svc-body-1" role="region" aria-labelledby="svc-btn-1">
+              <div class="svc__body-inner">
+                <p data-i18n="svc.1.d">Positioning, naming, voice — the thinking everything else is built on.</p>
+                <img class="svc__thumb" src="assets/img/project-02-a.svg" alt="" width="1200" height="1500"
+                  loading="lazy" decoding="async">
+              </div>
+            </div>
+          </li>
+          <li class="svc" data-preview="assets/img/project-01-a.svg">
+            <h3 class="svc__heading">
+              <button class="svc__head" type="button" aria-expanded="false" aria-controls="svc-body-2" id="svc-btn-2">
+                <span class="svc__num">02</span>
+                <span class="svc__title display" data-i18n="svc.2.t">Visual Identity</span>
+                <span class="svc__icon" aria-hidden="true"><i></i><i></i></span>
+              </button>
+            </h3>
+            <div class="svc__body" id="svc-body-2" role="region" aria-labelledby="svc-btn-2">
+              <div class="svc__body-inner">
+                <p data-i18n="svc.2.d">Marks, typography, colour and a visual language drawn for you alone.</p>
+                <img class="svc__thumb" src="assets/img/project-01-a.svg" alt="" width="1200" height="1500"
+                  loading="lazy" decoding="async">
+              </div>
+            </div>
+          </li>
+          <li class="svc" data-preview="assets/img/project-03-a.svg">
+            <h3 class="svc__heading">
+              <button class="svc__head" type="button" aria-expanded="false" aria-controls="svc-body-3" id="svc-btn-3">
+                <span class="svc__num">03</span>
+                <span class="svc__title display" data-i18n="svc.3.t">Art Direction</span>
+                <span class="svc__icon" aria-hidden="true"><i></i><i></i></span>
+              </button>
+            </h3>
+            <div class="svc__body" id="svc-body-3" role="region" aria-labelledby="svc-btn-3">
+              <div class="svc__body-inner">
+                <p data-i18n="svc.3.d">Photography, campaigns and imagery that are unmistakably yours.</p>
+                <img class="svc__thumb" src="assets/img/project-03-a.svg" alt="" width="1200" height="1500"
+                  loading="lazy" decoding="async">
+              </div>
+            </div>
+          </li>
+          <li class="svc" data-preview="assets/img/project-06-a.svg">
+            <h3 class="svc__heading">
+              <button class="svc__head" type="button" aria-expanded="false" aria-controls="svc-body-4" id="svc-btn-4">
+                <span class="svc__num">04</span>
+                <span class="svc__title display" data-i18n="svc.4.t">Digital Experience</span>
+                <span class="svc__icon" aria-hidden="true"><i></i><i></i></span>
+              </button>
+            </h3>
+            <div class="svc__body" id="svc-body-4" role="region" aria-labelledby="svc-btn-4">
+              <div class="svc__body-inner">
+                <p data-i18n="svc.4.d">Websites and digital products that carry the brand into every interaction.</p>
+                <img class="svc__thumb" src="assets/img/project-06-a.svg" alt="" width="1200" height="1500"
+                  loading="lazy" decoding="async">
+              </div>
+            </div>
+          </li>
+          <li class="svc" data-preview="assets/img/project-04-a.svg">
+            <h3 class="svc__heading">
+              <button class="svc__head" type="button" aria-expanded="false" aria-controls="svc-body-5" id="svc-btn-5">
+                <span class="svc__num">05</span>
+                <span class="svc__title display" data-i18n="svc.5.t">Packaging</span>
+                <span class="svc__icon" aria-hidden="true"><i></i><i></i></span>
+              </button>
+            </h3>
+            <div class="svc__body" id="svc-body-5" role="region" aria-labelledby="svc-btn-5">
+              <div class="svc__body-inner">
+                <p data-i18n="svc.5.d">Structures and surfaces designed around the product — and the shelf it lives on.
+                </p>
+                <img class="svc__thumb" src="assets/img/project-04-a.svg" alt="" width="1200" height="1500"
+                  loading="lazy" decoding="async">
+              </div>
+            </div>
+          </li>
+          <li class="svc" data-preview="assets/img/project-05-a.svg">
+            <h3 class="svc__heading">
+              <button class="svc__head" type="button" aria-expanded="false" aria-controls="svc-body-6" id="svc-btn-6">
+                <span class="svc__num">06</span>
+                <span class="svc__title display" data-i18n="svc.6.t">Brand Guidelines</span>
+                <span class="svc__icon" aria-hidden="true"><i></i><i></i></span>
+              </button>
+            </h3>
+            <div class="svc__body" id="svc-body-6" role="region" aria-labelledby="svc-btn-6">
+              <div class="svc__body-inner">
+                <p data-i18n="svc.6.d">Clear, living systems that keep every touchpoint consistent as you grow.</p>
+                <img class="svc__thumb" src="assets/img/project-05-a.svg" alt="" width="1200" height="1500"
+                  loading="lazy" decoding="async">
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Desktop hover preview (follows the pointer) -->
+      <div class="svc-preview" aria-hidden="true">
+        <div class="svc-preview__frame"><img class="svc-preview__img" src="assets/img/project-02-a.svg" alt=""
+            width="1200" height="1500" decoding="async"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 06 FOOTER ============ -->
+  <!-- Contact details below are placeholders — replace with real ones. -->
+  <footer class="footer" id="contact" data-theme="dark" aria-labelledby="footer-title">
+    <div class="wrap">
+      <p class="t-index" data-reveal="fade"><span>(05)</span> <span data-i18n="nav.contact">Contact</span></p>
+      <h2 class="footer__statement display display--xl" id="footer-title" data-reveal="lines">
+        <span class="line"><span class="line__inner" data-i18n="foot.l1">Let’s make</span></span>
+        <span class="line line--indent"><span class="line__inner" data-i18n="foot.l2">something</span></span>
+        <span class="line"><span class="line__inner" data-i18n="foot.l3">that fits.</span></span>
+      </h2>
+
+      <div class="footer__cta" data-reveal="fade">
+        <p class="footer__together" data-i18n="foot.together">Let’s work together.</p>
+        <a class="btn btn--light" href="mailto:hello@pimxbranding.com" data-magnetic data-cursor="cta">
+          <span class="btn__label" data-i18n="cta.start">Start a project</span>
+          <span class="btn__arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="footer__grid" data-reveal="fade">
+        <dl class="footer__contact">
+          <div>
+            <dt class="t-label" data-i18n="foot.email">Email</dt>
+            <dd><a href="mailto:hello@pimxbranding.com">hello@pimxbranding.com</a></dd>
+          </div>
+          <div>
+            <dt class="t-label" data-i18n="foot.phone">Phone</dt>
+            <dd><a href="tel:+000000000000" dir="ltr">+000 0000 0000</a></dd>
+          </div>
+          <div>
+            <dt class="t-label" data-i18n="foot.instagram">Instagram</dt>
+            <dd><a href="#" rel="noopener" dir="ltr">@pimxbranding</a></dd>
+          </div>
+          <div>
+            <dt class="t-label" data-i18n="foot.linkedin">LinkedIn</dt>
+            <dd><a href="#" rel="noopener">Pimx Branding</a></dd>
+          </div>
+        </dl>
+        <nav class="footer__nav" aria-label="Footer">
+          <p class="t-label" data-i18n="foot.nav">Navigate</p>
+          <ul>
+            <li><a href="#work" data-i18n="nav.work">Work</a></li>
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li><a href="#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- The final "fit": letters arrive loosely spaced and lock together. -->
+      <p class="footer__wordmark" aria-hidden="true" dir="ltr"><span>P</span><span>I</span><span>M</span><span>X</span>
+      </p>
+
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> Pimx Branding. <span data-i18n="foot.rights">All rights reserved.</span></p>
+        <a class="footer__top" href="#top"><span data-i18n="foot.top">Back to top</span> <span
+            aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom cursor (desktop, fine pointer only) -->
+  <div class="cursor" aria-hidden="true"><span class="cursor__label" data-i18n="cursor.view">View</span></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/i18n.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
